@@ -2,4 +2,4 @@
 
 A (MP) parallelised maximum likelihood fitting routine for the Mocz &amp; Burkhart (2019) (https://arxiv.org/pdf/1908.00544.pdf) Langevin logarithmic density PDF for supersonic turbulent density fluctuations. 
 
-To use the code edit the `main.py`, so that it reads in your PDF data.
+To use the code edit the `main.py`, so that it reads in your PDF data, utilises the number of cores you request, `n_cores`, and outputs the best fit parameters.
