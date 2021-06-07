@@ -20,12 +20,12 @@ def main():
     # Fix the random seed for the MCMC process
     np.random.seed(42)
 
-    # Define the pdf data to be fit to
-    fit_label       = "M2MA2"
-    pdf_data        = pd.read_csv(f"../../Data/averaged_data/volume_weighted/{sim_label}_ln_dens.csv")
-    bins            = np.array(pdf_data["bins"])    # the bins from the PDF
-    pdf             = np.array(pdf_data["PDF"])     # the values of the PDF
-    pdf_std         = np.array(pdf_data["PDF_std"]) # the uncertainty (1\sigma) in each bin
+    # Define the pdf data to be fit to (CHANGE TO READ IN YOUR OWN DATA)
+    fit_label       = "M2MA01"
+    pdf_data        = pd.read_csv(f"{sim_label}_ln_dens.csv")   # this reads in the example data file. 
+    bins            = np.array(pdf_data["bins"])                # the bins from the PDF
+    pdf             = np.array(pdf_data["PDF"])                 # the values of the PDF
+    pdf_std         = np.array(pdf_data["PDF_std"])             # the uncertainty (1\sigma) in each bin
     pdf_data        = np.array([bins,pdf,pdf_std])
 
     # Initial parameters guesses
